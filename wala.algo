@@ -1,0 +1,29 @@
+ALGORITHM Count_sentance
+VAR
+    str:STRING
+    i:INTEGER
+    NB_C,NB_V:INTEGER:=0
+    NB_W:INTEGER:=1
+BEGIN
+    write("enter a sentance")
+    read(str)
+    WHILE (str(i) <> ".") DO
+
+    NB_C= NB_C+1
+
+    IF (str(i)= " ") THEN
+        NB_W=NB_W+1
+    END_IF
+    IF (str(i)= ("a","e","i","u","o")) THEN
+        NB_V=NB_V+1
+    END_IF
+
+    i++
+
+    END_WHILE
+write(NB_C)
+write(NB_V)
+write(NB_W)
+
+
+END
